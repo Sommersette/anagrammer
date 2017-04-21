@@ -11,18 +11,18 @@ _The purpose of the app is to take an input in a text field and find all word co
 
 ## Setup/Installation Requirements
 
-* _Download or clonde code from github_
+* _Download or clone code from github_
 * _In an internet browser of your choice load the server. localhost:4567_
-* _Using terminal/command line navigate to the project folder and run 'ruby app.rb.
+* _Using terminal/command line navigate to the project folder and run 'ruby app.rb'.
 * _Reload the server by hitting the refresh button._
 * _Enter text into the text field and click the button to see the possible angrams._
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Specifications
 
-| behavior |  input   |  output  |
+| Behavior |  Input   |  Output  |
 |----------|:--------:|:--------:|
+|convert all words to lower case|Dad|dad|
 ||||
 
 ## Known Bugs
