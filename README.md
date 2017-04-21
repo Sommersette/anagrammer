@@ -22,7 +22,11 @@ _The purpose of the app is to take an input in a text field and find all word co
 
 | Behavior |  Input   |  Output  |
 |----------|:--------:|:--------:|
-|convert all words to lower case|Dad|dad|
+|All words with capital letters and change them to lowercase|Dad|dad|
+|Check if two words are anagrams|||
+||||
+||||
+||||
 ||||
 
 ## Known Bugs
