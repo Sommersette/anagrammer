@@ -11,12 +11,12 @@ describe('String#anagrammer') do
   #   expect(("A dog! A panic in a pagoda!").anagrammer).to(eq('a dog a panic in a pagoda'))
   # end
 
-  it("removes all spaces from inputted String") do #to lowercase letter test
+  it("removes all spaces from inputted String") do
     expect(("Are we not drawn onward to new era?").anagrammer).to(eq('arewenotdrawnonwardtonewera'))
   end
 
-  it("") do #to lowercase letter test
-    expect(("").anagrammer).to(eq(''))
+  it("checks if input is a palindrome") do
+    expect(("arewenotdrawnonwardtonewera").anagrammer).to(eq('arewenotdrawnonwardtonewera'))
   end
 
 
