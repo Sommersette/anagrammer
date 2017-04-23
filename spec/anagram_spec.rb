@@ -4,12 +4,16 @@ require('anagram')
 describe('String#anagrammer') do
 
   it("changes any uppercase letter to lowercase") do #to lowercase letter test
-    expect(("DaD").anagrammer).to(eq("dad"))
+    expect(("A But Tuba").anagrammer).to(eq('a but tuba'))
+  end
+  
+  it("removes all punctuation") do #to lowercase letter test
+    expect(("A dog! A panic in a pagoda!").anagrammer).to(eq('a dog a panic in a pagoda'))
   end
 
-  it("checks if word or words are the same forwards and backwards") do #.reverse .strip
-    expect(("Racecar").anagrammer).to(eq("racecar"))
-  end
+  # it("checks if word or words are the same letter order forwards and backwards") do #.reverse & regex
+  #   expect(("A but Tuba").anagrammer).to(eq('a but tuba'))
+  # end
 
   # it("Check if two letters are identical") do # <=> .sort .length and .strip!
   #   expect(("d").anagrammer).to(eq("d"))
