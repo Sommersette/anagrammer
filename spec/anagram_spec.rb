@@ -15,6 +15,10 @@ describe('String#anagrammer') do
     expect(("Are we not drawn onward to new era?").anagrammer).to(eq('arewenotdrawnonwardtonewera'))
   end
 
+  it("") do #to lowercase letter test
+    expect(("").anagrammer).to(eq(''))
+  end
+
 
 
   # it("checks if word or words are the same letter order forwards and backwards") do #.reverse & regex
