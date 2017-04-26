@@ -4,7 +4,11 @@ require('anagram')
 describe('String#anagrammer') do
 
   it("checks to see if input is an actual word and has vowels") do
-    expect(('word').anagrammer('word')).to(eq(true))
+    expect(('word').word('word')).to(eq(true))
+  end
+
+  it('checks if input 1 and input 2 have 0 letters in common') do
+    expect(('hi').antigram()).to(eq(false))
   end
 
   # it("checks to see if two words are anagrams") do
