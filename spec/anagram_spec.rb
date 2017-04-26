@@ -4,7 +4,7 @@ require('anagram')
 describe('String#anagrammer') do
 
   it("checks to see if input is an actual word and has vowels") do
-    expect(('word').anagrammer('word')).to(eq('word'))
+    expect(('word').anagrammer('word')).to(eq(true))
   end
 
   # it("checks to see if two words are anagrams") do
