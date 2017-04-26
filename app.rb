@@ -4,12 +4,14 @@ require('sinatra/reloader')
 require('pry')
 require('./lib/anagram')
 also_reload('lib/**/*.rb')
-#
-# get('/') do
-#   erb(:form)
-# end
-#
-# get('/word') do
-#   @result =  params.fetch('anagram').anagram()
-#   erb(:words)
-# end
+
+get('/') do
+  erb(:form)
+end
+
+get('/word') do
+  params.fetch('input1')
+  params.fetch('input2')
+  @result = "".anagrammer()
+  erb(:words)
+end
