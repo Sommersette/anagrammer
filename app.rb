@@ -12,6 +12,6 @@ end
 get('/word') do
   params.fetch('input1')
   params.fetch('input2')
-  @result = "".anagrammer()
+  @result = "".anagrammer('anagrammer')
   erb(:words)
 end
