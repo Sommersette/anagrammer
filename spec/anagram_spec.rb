@@ -1,19 +1,26 @@
 require('rspec')
 require('anagram')
+require('pry')
 
 describe('String#anagrammer') do
 
-  it("checks to see if input is an actual word and has vowels") do
-    expect(('word').word('word')).to(eq(true))
+  describe('String#anagrammer') do
+    it("checks to see if input is an actual word and has vowels") do
+      expect(('hello').anagrammer('hello')).to(eq(true))
+    end
   end
 
-  it('checks if input 1 and input 2 have 0 letters in common') do
-    expect(('hi').antigram()).to(eq(false))
-  end
-
-  # it("checks to see if two words are anagrams") do
-  #     expect(('dad').anagrammer('dad')).to(eq('dad'))
+  # describe('String#antigram')
+  #   it('checks if input 1 and input 2 have 0 letters in common') do
+  #     expect(('hi').antigram()).to(eq('bye'))
+  #   end
   # end
+
+  describe('String#anagram') do
+    it("checks to see if two words are anagrams") do
+      expect(('dad').anagram('dad')).to(eq(true))
+    end
+  end
 
   # it("removes all spaces from inputted String") do
   #   expect(("Are we not drawn onward to new era?").anagrammer('')).to(eq("Arewenotdrawnonwardtonewera?"))
