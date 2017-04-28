@@ -28,12 +28,12 @@ class String
 
 # checks for uniqe letters
   define_method(:antigram) do |second|
-    input1 = self.scan(/\w/i)
-    input2 = second.scan(/\w/i)
+    input1 = self.scan(/\w/i).push()
+    input2 = second.scan(/\w/i).push()
     if input1 & input2 = []
-      "& are NOT an antigram"
+      "are antigrams"
     else
-      "& are an antigram"
+      "are NOT antigrams"
     end
   end
 end
