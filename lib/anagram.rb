@@ -1,7 +1,7 @@
 class String
 # checks for vowels
   define_method(:word) do |second|
-    if self.scan(/[aeiouy]/).count()>=1 === second.scan(/[aeiouy]/).count()>=1
+    if self.scan(/[aeiouy]/i).count()>=1
     else
       "Sorry, I need a real word otherwise..."
     end
@@ -32,8 +32,7 @@ class String
 
 # checks for uniqe letters
   define_method(:antigram) do |second|
-    unique = (self.scan(/\w/) + second.scan(/\w/)).uniq
-    if  (self + second).length == unique.length()
+    if self.length() + second.length() == (self.scan(/\w/).uniq + second.scan(/\w/).uniq).length()
       "are antigrams"
     else
       "are NOT antigrams"
