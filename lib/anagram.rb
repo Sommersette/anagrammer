@@ -16,21 +16,20 @@ class String
   end
 
 # makes all characters lowercase, strips all spaces and punctuation
-define_method(:palindrome) do |second|
-  # self
-  small_letters_only = self.gsub(/([[:punct:]])/, '').downcase()
-  no_space = small_letters_only.gsub(/\s+/, "")
-  no_space.length()
-  # second
-  s_letters = second.gsub(/([[:punct:]])/, '').downcase()
-  n_spc = s_letters.gsub(/\s+/, "")
-  no_space.length() === n_spc.length.reverse()
-  if
-    "Are palindromes."
-  else
-    "Are not palindromes"
+  define_method(:palindrome) do |second|
+    small_letters_only = self.gsub(/([[:punct:]])/, '').downcase()
+    no_space = small_letters_only.gsub(/\s+/, "")
+    no_space.length()
+    # second
+    s_letters = second.gsub(/([[:punct:]])/, '').downcase()
+    n_spc = s_letters.gsub(/\s+/, "")
+
+      if no_space === n_spc.reverse()
+      "Are palidromes."
+    else
+      "Are not palidromes"
+      end
   end
-end
 
 # checks for uniqe letters
   define_method(:antigram) do |second|
