@@ -1,18 +1,17 @@
 class String
 # checks for vowels
-  define_method(:word?) do |second|
-    if self.scan(/[aeiouy]/).count()>=1 == second.scan(/[aeiouy]/).count()>=1
-      true
+  define_method(:word) do |second|
+    if self.scan(/[aeiouy]/).count()>=1 === second.scan(/[aeiouy]/).count()>=1
     else
-      "Sorry I only understand English"
+      "Sorry, I need an English word."
     end
   end
 # checks to see if both have identical characters
   define_method(:anagram)  do |second|
     if (self.chars.sort() == second.chars.sort())
-        'Is an anagram'
+        'Are anagrams'
       else
-        "Is NOT an anagram"
+        "Are NOT an anagram"
     end
   end
 
@@ -20,10 +19,10 @@ class String
   define_method(:palindrome) do |second|
     if small_letters_only = self.gsub(/([[:punct:]])/, '').downcase()
       no_space = small_letters_only.gsub(/\s+/, "")
-      backwards = no_space.reverse()
-      backwards
+      no_space.reverse()
+      "Are palidromes."
     else
-      false
+      "Are not palidromes"
     end
   end
 
@@ -32,9 +31,9 @@ class String
     input1 = self.scan(/\w/i)
     input2 = second.scan(/\w/i)
     if input1 & input2 = []
-      "& is NOT an antigram"
+      "& are NOT an antigram"
     else
-      "& is an antigram"
+      "& are an antigram"
     end
   end
 end

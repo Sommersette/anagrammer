@@ -9,9 +9,11 @@ get('/') do
   erb(:form)
 end
 
-get('/word') do
-  params.fetch('input1')
-  params.fetch('input2')
-  @result = "".anagrammer('anagrammer')
+get('/lexicon') do
+  @word = params.fetch('input2').word('input1')
+  @anagram =  params.fetch('input2').anagram('input1')
+  @antigram = params.fetch('input2').antigram('input1')
+  @palindrome = params.fetch('input2').palindrome('input1')
+
   erb(:words)
 end

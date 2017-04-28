@@ -4,9 +4,9 @@ require('pry')
 
 # describe('String#anagrammer') do
 
-  describe('String#word?') do
+  describe('String#word') do
     it("checks to see if input is an actual word and has vowels") do
-      expect(('hello').word?('hello')).to(eq(true))
+      expect(('hello').word('hello')).to(eq())
     end
   end
 

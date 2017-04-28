@@ -9,7 +9,7 @@ describe('the word returned', {:type => :feature}) do
     visit('/')
     fill_in('input1', :with => 'dad')
     fill_in('input2', :with => 'mom')
-    click_button('Rearrange')
+    click_button('Check')
     expect(page).to have_content('')
   end
 end
