@@ -3,15 +3,15 @@ class String
   define_method(:word) do |second|
     if self.scan(/[aeiouy]/).count()>=1 === second.scan(/[aeiouy]/).count()>=1
     else
-      "Sorry, I need an English word."
+      "Sorry, I need a real word otherwise..."
     end
   end
 # checks to see if both have identical characters
   define_method(:anagram)  do |second|
     if (self.chars.sort() == second.chars.sort())
-        'Are anagrams'
+         "Are anagrams"
       else
-        "Are NOT an anagram"
+        "Are NOT anagrams"
     end
   end
 
@@ -23,19 +23,17 @@ class String
     # second
     s_letters = second.gsub(/([[:punct:]])/, '').downcase()
     n_spc = s_letters.gsub(/\s+/, "")
-
-      if no_space === n_spc.reverse()
+    if no_space === n_spc.reverse()
       "Are palidromes."
     else
       "Are not palidromes"
-      end
+    end
   end
 
 # checks for uniqe letters
   define_method(:antigram) do |second|
-    input1 = self.scan(/\w/i).push()
-    input2 = second.scan(/\w/i).push()
-    if input1 & input2 = []
+    unique = (self.scan(/\w/) + second.scan(/\w/)).uniq
+    if  (self + second).length == unique.length()
       "are antigrams"
     else
       "are NOT antigrams"

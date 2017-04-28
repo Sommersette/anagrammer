@@ -6,13 +6,13 @@ require('pry')
 
   describe('String#word') do
     it("checks to see if input is an actual word and has vowels") do
-      expect(('hello').word('hello')).to(eq())
+      expect(('hello').word('hello')).to(eq(nil))
     end
   end
 
   describe('String#anagram') do
     it("checks to see if two words are anagrams") do
-      expect(('dad').anagram('dad')).to(eq('Is an anagram'))
+      expect(('dad').anagram('dad')).to(eq('Are anagrams'))
     end
   end
 
@@ -26,12 +26,12 @@ require('pry')
     # end # refactored and output no longer passes with spaces
 
     it("removes all punctuation, changes all letters to lowercase, and removes all spaces.") do
-      expect(("A dog! A panic in a pagoda!").palindrome('adogapanicinapagoda')).to(eq('adogapanicinapagoda'))
+      expect(("A dog! A panic in a pagoda!").palindrome('adogapanicinapagoda')).to(eq('Are palidromes.'))
     end
   end
 
   describe('String#antigram') do
   it("checks if input is an antigram") do
-    expect(("hello").antigram('bye')).to(eq("& is NOT an antigram"))
+    expect(("hello").antigram('bye')).to(eq("are NOT antigrams"))
   end
 end

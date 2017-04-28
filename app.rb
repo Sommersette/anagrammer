@@ -10,10 +10,10 @@ get('/') do
 end
 
 get('/lexicon') do
-  @word = params.fetch('input2').word('input1')
-  @anagram =  params.fetch('input2').anagram('input1')
-  @antigram = params.fetch('input2').antigram('input1')
-  @palindrome = params.fetch('input2').palindrome('input1')
+  @word = params.fetch('input1').word('input2')
+  @anagram =  params.fetch('input1').anagram('input2')
+  @antigram = params.fetch('input1').antigram('input2')
+  @palindrome = params.fetch('input1').palindrome('input2')
 
   erb(:words)
 end
