@@ -32,7 +32,7 @@ class String
 
 # checks for uniqe letters
   define_method(:antigram) do |second|
-    if self.length() + second.length() == (self.scan(/\w/).uniq + second.scan(/\w/).uniq).length()
+    if self.chars() & second.chars() == []
       "are antigrams"
     else
       "are NOT antigrams"
