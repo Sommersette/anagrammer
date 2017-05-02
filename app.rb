@@ -1,7 +1,5 @@
-require('rspec')
 require('sinatra')
 require('sinatra/reloader')
-require('pry')
 require('./lib/anagram')
 also_reload('lib/**/*.rb')
 

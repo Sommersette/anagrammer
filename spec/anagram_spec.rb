@@ -1,6 +1,4 @@
-require('rspec')
 require('anagram')
-require('pry')
 
 # describe('String#anagrammer') do
 
